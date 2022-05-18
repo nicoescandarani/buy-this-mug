@@ -26,7 +26,7 @@ span {
 .selector {
   background-color: #1a1a1a;
   height: 600px;
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,6 +48,7 @@ span {
 
   &__second-text {
     font-size: 12px;
+    margin-bottom: 30px;
   }
 
   &__buttons {
@@ -57,13 +58,17 @@ span {
   }
 }
 
-button {
+.color-button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   margin-right: 20px;
   margin-bottom: 20px;
   box-shadow: 4px 4px 10px #00000036;
+
+  &--selected {
+    border: 3px solid #ffffff;
+  }
 }
 
 .mug-wrapper {
@@ -116,7 +121,7 @@ button {
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
 
-      button {
+      .color-button {
         margin: 0;
       }
     }
@@ -124,6 +129,10 @@ button {
 }
 
 @media (max-width: 500px) {
+  h1 {
+    margin-bottom: 20px;
+  }
+
   .mug-wrapper {
     height: 100%;
   }
@@ -141,12 +150,16 @@ button {
       margin-right: 0;
     }
 
+    &__second-text {
+      margin-bottom: 20px;
+    }
+
     &__buttons {
       width: 100%;
       display: flex;
       gap: 0;
 
-      button {
+      .color-button {
         margin-right: 24px;
         margin-bottom: 10px;
       }
