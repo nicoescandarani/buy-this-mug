@@ -8,10 +8,14 @@ import { NgtAmbientLightModule, NgtPointLightModule } from '@angular-three/core/
 import { NgtPrimitiveModule } from '@angular-three/core/primitive';
 import { NgtSobaLoaderModule } from '@angular-three/soba/loaders';
 import { NgtSobaOrbitControlsModule } from '@angular-three/soba/controls';
+import { HomeComponent } from './home/home.component';
+import { MugComponent } from './mug/mug.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    MugComponent
   ],
   imports: [
     BrowserModule,
